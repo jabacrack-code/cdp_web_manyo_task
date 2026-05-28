@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>CdpWebManyoTask</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +11,15 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to 'Tasks Index', tasks_path, id: 'tasks-index' %>
+      <%= link_to 'New Task', new_task_path, id: 'new-task' %>
+    </nav>
+
+    <% flash.each do |key, message| %>
+      <div class="flash <%= key %>"><%= message %></div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
