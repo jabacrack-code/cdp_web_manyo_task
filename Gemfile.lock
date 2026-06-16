@@ -109,6 +109,7 @@ GEM
     matrix (0.4.2)
     method_source (1.1.0)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.9)
     minitest (5.23.1)
     msgpack (1.7.2)
     net-imap (0.4.11)
@@ -121,19 +122,8 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     nio4r (2.7.3)
-    nokogiri (1.16.5-aarch64-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.5-arm-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.5-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.16.5-x64-mingw-ucrt)
-      racc (~> 1.4)
-    nokogiri (1.16.5-x86-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.5-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.16.5-x86_64-linux)
+    nokogiri (1.16.5)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     pg (1.5.6)
     public_suffix (5.0.5)
@@ -188,14 +178,14 @@ GEM
     rspec-mocks (3.13.8)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-rails (6.1.5)
-      actionpack (>= 6.1)
-      activesupport (>= 6.1)
-      railties (>= 6.1)
-      rspec-core (~> 3.13)
-      rspec-expectations (~> 3.13)
-      rspec-mocks (~> 3.13)
-      rspec-support (~> 3.13)
+    rspec-rails (5.1.2)
+      actionpack (>= 5.2)
+      activesupport (>= 5.2)
+      railties (>= 5.2)
+      rspec-core (~> 3.10)
+      rspec-expectations (~> 3.10)
+      rspec-mocks (~> 3.10)
+      rspec-support (~> 3.10)
     rspec-support (3.13.7)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
@@ -258,26 +248,20 @@ GEM
     zeitwerk (2.6.15)
 
 PLATFORMS
-  aarch64-linux
-  arm-linux
-  arm64-darwin
-  x64-mingw-ucrt
-  x86-linux
-  x86_64-darwin
-  x86_64-linux
+  ruby
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
-  factory_bot_rails
+  factory_bot_rails (~> 6.0)
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (= 6.1.7.7)
   rexml
-  rspec-rails
+  rspec-rails (~> 5.0)
   sass-rails (>= 6)
   selenium-webdriver
   spring
